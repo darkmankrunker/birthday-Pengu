@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday 💖🐧</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{      
+    --pink:#ff4081;
+    --purple:#9c27b0;
+    --gold:#ffd700;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:white;
+    overflow-x:hidden;
+    min-height:100vh;
+    background:black;
+}
+
+/* VIDEO */
+
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+    opacity:0.85;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(156,39,176,0.45),
+        rgba(255,64,129,0.4)
+    );
+    z-index:-1;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+    animation:introFade 2s ease;
+}
+
+@keyframes introFade{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* TITLE */
+
+.title{
+    font-family:'Dancing Script',cursive;
+    font-size:clamp(3rem,9vw,6rem);
+    margin:30px 0 10px;
+
+    animation:
+    glow 2.5s ease-in-out infinite alternate,
+    titleDrop 1.8s ease;
+}
+
+@keyframes titleDrop{
+    from{
+        opacity:0;
+        transform:translateY(-100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:
+        0 0 30px #fff,
+        0 0 50px var(--pink);
+    }
+
+    to{
+        text-shadow:
+        0 0 50px #fff,
+        0 0 80px var(--purple),
+        0 0 100px var(--gold);
+    }
+}
+
+.subtitle{
+    font-size:1.3rem;
+}
+
+/* SECTION */
+
+.section{
+    margin:60px 0;
+    padding:30px;
+    background:rgba(255,255,255,0.1);
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+}
+
+/* PENGU */
+
+.pengu-container{
+    width:200px;
+    height:230px;
+    margin:20px auto;
+    animation:penguJump 2s ease;
+}
+
+@keyframes penguJump{
+
+    0%{
+        transform:translateY(100px) scale(0.5);
+        opacity:0;
+    }
+
+    60%{
+        transform:translateY(-20px) scale(1.1);
+    }
+
+    100%{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+}
+
+/* CAKE */
+
+
+.cake-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.cake-cut{
+    transform:translateX(40px) rotate(10deg);
+    transition:1s;
+}
+
+.smoke{
+    width:12px;
+    height:12px;
+    background:rgba(255,255,255,0.5);
+    border-radius:50%;
+    position:absolute;
+    animation:smokeUp 1s linear forwards;
+}
+
+@keyframes smokeUp{
+    from{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+    to{
+        opacity:0;
+        transform:translateY(-40px) scale(2);
+    }
+}
+
+.cake {
+    width: 300px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.plate {
+    width: 300px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.cake-body {
+    width: 240px;
+    height: 140px;
+    margin: -10px auto 0;
+    border-radius: 20px;
+    position: relative;
+    background: linear-gradient(180deg,#ff5ca8,#ff2f74);
+    overflow: visible;
+    box-shadow:
+        inset 0 -15px 20px rgba(0,0,0,0.2),
+        0 10px 25px rgba(0,0,0,0.25);
+}
+
+.cake-layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(#ffd700,#ff9800);
+    border-radius: 0 0 20px 20px;
+}
+
+.candle {
+    position: absolute;
+    width: 14px;
+    height: 55px;
+    background: repeating-linear-gradient(
+        45deg,
+        white,
+        white 5px,
+        #ff4081 5px,
+        #ff4081 10px
+    );
+    top: -50px;
+    border-radius: 8px;
+}
+
+.candle1 {
+    left: 50px;
+}
+
+.candle2 {
+    left: 112px;
+}
+
+.candle3 {
+    left: 174px;
+}
+
+.flame {
+    position: absolute;
+    top: -18px;
+    left: 3px;
+    width: 8px;
+    height: 18px;
+    background: #ffeb3b;
+    border-radius: 50%;
+    box-shadow:
+        0 0 15px #ffeb3b,
+        0 0 25px orange;
+    animation: flame 0.8s infinite alternate;
+}
+
+@keyframes flame {
+    from {
+        transform: scale(1) rotate(-2deg);
+    }
+    to {
+        transform: scale(1.3) rotate(2deg);
+    }
+}
+
+/* BUTTONS */
+
+button{
+    margin:12px;
+    padding:14px 32px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    color:white;
+    font-size:1rem;
+    transition:0.4s;
+}
+
+button:hover{
+    transform:translateY(-6px) scale(1.05);
+}
+
+.surprise-btn{
+    background:
+    linear-gradient(45deg,#ff4081,#f50057);
+}
+
+.fireworks-btn{
+    background:
+    linear-gradient(45deg,#9c27b0,#00bcd4);
+}
+
+.dance-btn{
+    background:
+    linear-gradient(45deg,#ffd700,#ff9800);
+}
+
+/* MESSAGE */
+
+#message{
+    min-height:140px;
+    font-size:1.45rem;
+    line-height:1.7;
+    margin:30px auto;
+    max-width:720px;
+    padding:30px;
+    background:rgba(255,255,255,0.18);
+    border-radius:25px;
+    backdrop-filter:blur(12px);
+    display:none;
+}
+
+/* FOOD */
+
+.food-item{
+    display:inline-block;
+    font-size:2.5rem;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.food-item:hover{
+    transform:scale(1.4);
+}
+
+/* GALLERY */
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    justify-content:center;
+}
+
+.gallery img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* MUSIC */
+
+.music-toggle{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:rgba(0,0,0,0.5);
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.7rem;
+    z-index:1000;
+}
+
+/* NOTES */
+
+.notes-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin-top:25px;
+}
+
+.note{
+    width:250px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.15);
+    transform:rotate(-2deg);
+    transition:0.4s;
+    font-size:1.1rem;
+}
+
+.note:hover{
+    transform:scale(1.08) rotate(0deg);
+}
+
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    color:pink;
+    animation:float 6s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(100vh) scale(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-10vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+/* CHATBOT */
+
+#openChatBtn{
+    position:fixed;
+    bottom:110px;
+    right:25px;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    font-size:2rem;
+    background:
+    linear-gradient(45deg,#ff4081,#9c27b0);
+    z-index:1000;
+    box-shadow:0 0 25px rgba(255,64,129,0.7);
+}
+
+#pengu-chat{
+    position:fixed;
+    bottom:190px;
+    right:25px;
+    width:340px;
+    height:460px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    overflow:hidden;
+    display:none;
+    flex-direction:column;
+    z-index:1000;
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
+}
+
+#chat-header{
+    padding:18px;
+    background:
+    linear-gradient(45deg,#ff4081,#9c27b0);
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+#chat-messages{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+}
+
+.pengu-msg,
+.user-msg{
+    padding:12px 16px;
+    border-radius:18px;
+    margin-bottom:12px;
+    max-width:85%;
+}
+
+.pengu-msg{
+    background:rgba(255,255,255,0.2);
+}
+
+.user-msg{
+    background:#ff4081;
+    margin-left:auto;
+}
+
+#chat-input-area{
+    display:flex;
+    padding:12px;
+    gap:10px;
+}
+
+#chatInput{
+    flex:1;
+    border:none;
+    border-radius:20px;
+    padding:12px;
+    outline:none;
+}
+
+#sendBtn{
+    padding:10px 16px;
+    border-radius:50%;
+    background:#ff4081;
+}
+
+/* CANVAS */
+
+canvas{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- VIDEO -->
+
+<video id="bg-video" autoplay loop muted playsinline>
+    <source
+    src="https://cdn.pixabay.com/video/2022/11/07/138088-769119564_large.mp4"
+    type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="container">
+
+    <h1 class="title">
+        🎉 Happy Birthday Thangachi!!! 🎉
+    </h1>
+
+    <p class="subtitle">
+        You are the most special person daaw!!😊 💖
+    </p>
+
+    <!-- PENGU -->
+
+    <div class="pengu-container">
+
+        <svg id="pengu"
+        width="200"
+        height="230"
+        viewBox="0 0 200 230"
+        fill="none">
+
+            <ellipse cx="100" cy="135" rx="65" ry="78" fill="#1E2A44"/>
+
+            <ellipse cx="100" cy="140" rx="46" ry="60" fill="#E6E8EB"/>
+
+            <circle cx="100" cy="72" r="46" fill="#1E2A44"/>
+
+            <ellipse cx="100" cy="70" rx="33" ry="29" fill="#E6E8EB"/>
+
+            <path d="M100 78 L72 95 L128 95 Z"
+            fill="#FF9800"/>
+
+            <circle cx="78" cy="62" r="10" fill="white"/>
+
+            <circle cx="122" cy="62" r="10" fill="white"/>
+
+            <ellipse class="eye"
+            cx="78"
+            cy="62"
+            rx="5"
+            ry="5"
+            fill="#1E2A44"/>
+
+            <ellipse class="eye"
+            cx="122"
+            cy="62"
+            rx="5"
+            ry="5"
+            fill="#1E2A44"/>
+
+            <ellipse cx="70"
+            cy="80"
+            rx="9"
+            ry="6"
+            fill="#FF4081"
+            opacity="0.7"/>
+
+            <ellipse cx="130"
+            cy="80"
+            rx="9"
+            ry="6"
+            fill="#FF4081"
+            opacity="0.7"/>
+
+        </svg>
+
+    </div>
+<!-- LOVE NOTES -->
+
+<div class="section">
+
+    <h2>💌 Cute Notes</h2>
+
+    <div class="notes-container">
+
+        <div class="note">
+            You're literally the best sister ever 😭💖
+        </div>
+
+        <div class="note">
+            Thank you for always annoying me 🤭✨
+        </div>
+
+        <div class="note">
+            Life is great and happy  with you 🐧🎂
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- CAKE -->
+
+    <div class="section">
+
+        <h2>🎂 Your Birthday Cake</h2>
+
+        <div class="cake">
+
+            <div class="plate"></div>
+
+            <div class="cake-body">
+
+                <div class="cake-layer"></div>
+
+                <div class="candle candle1">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle2">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle3">
+                    <div class="flame"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button onclick="blowCandles()">
+            🎉 Blow the Candles
+        </button>
+
+        <div class="cake-buttons">
+
+<button onclick="cutCake()">
+🍰 Cut Cake
+</button>
+
+
+</div>
+
+    </div>
+
+    <!-- PENGU GAMES -->
+
+    <div class="section">
+
+        <h2>🐧 Play with Pengu</h2>
+
+        <button onclick="danceParty()"
+        class="dance-btn">
+            💃 Penguin Dance Party
+        </button>
+
+        <p style="margin-top:20px;">
+            <strong>Feed Pengu</strong>
+        </p>
+
+        <div>
+
+            <span class="food-item"
+            onclick="feedPengu(this)">🐟</span>
+
+            <span class="food-item"
+            onclick="feedPengu(this)">🍰</span>
+
+            <span class="food-item"
+            onclick="feedPengu(this)">🍓</span>
+
+            <span class="food-item"
+            onclick="feedPengu(this)">🍦</span>
+
+        </div>
+
+    </div>
+
+    <!-- GALLERY -->
+
+    <div class="section">
+
+        <h2>📸 Sweet naughty  Memories 😁🤭🤪</h2>
+
+        <div class="gallery">
+
+            <img src="IMG-20260514-WA0026.jpg"
+            onclick="enlarge(this)">
+
+            <img src="IMG-20260514-WA0018.jpg"
+            onclick="enlarge(this)">
+
+            <img src="IMG-20260514-WA0023.jpg"
+            onclick="enlarge(this)">
+
+            <img src="IMG-20260514-WA0025.jpg"
+            onclick="enlarge(this)">
+
+            <img src="IMG-20260514-WA0017.jpg"
+            onclick="enlarge(this)">
+
+            <img src="IMG-20260514-WA0019.jpg"
+            onclick="enlarge(this)">
+
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+
+    <button class="surprise-btn"
+    onclick="launchSurprise()">
+        🎁 Click for Special Surprise!
+    </button>
+
+    <button class="fireworks-btn"
+    onclick="launchFireworks(6)">
+        🎆 Launch Fireworks
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<!-- MUSIC -->
+
+<audio id="birthdayMusic" loop>
+    <source
+    src="Anuv Jain - Arz Kiya Hai (Official Lyrical Video).mp3"
+    type="audio/mpeg">
+</audio>
+
+<button class="music-toggle"
+onclick="toggleMusic()">
+    <i id="musicIcon"
+    class="fas fa-music"></i>
+</button>
+
+<!-- CHATBOT -->
+
+<div id="pengu-chat">
+
+    <div id="chat-header">
+        🐧 Pengu Assistant
+    </div>
+
+    <div id="chat-messages">
+
+        <div class="pengu-msg">
+            Hiiiii 💖 I'm Pengu! Ask me anything!
+        </div>
+
+    </div>
+
+    <div id="chat-input-area">
+
+        <input type="text"
+        id="chatInput"
+        placeholder="Talk to Pengu...">
+
+        <button id="sendBtn">➤</button>
+
+    </div>
+
+</div>
+
+<button id="openChatBtn">🐧</button>
+
+<script>
+
+/* CONFETTI */
+
+const canvas =
+document.getElementById('confetti-canvas');
+
+const ctx =
+canvas.getContext('2d');
+
+let particles = [];
+
+function resize(){
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+}
+
+resize();
+
+window.addEventListener('resize',resize);
+
+class Confetti{
+
+    constructor(){
+
+        this.x = Math.random() * canvas.width;
+
+        this.y = Math.random() * -canvas.height;
+
+        this.size = Math.random() * 14 + 8;
+
+        this.speed = Math.random() * 7 + 5;
+
+        this.angle = Math.random() * 360;
+
+        this.color = [
+            '#ff4081',
+            '#ffd700',
+            '#9c27b0',
+            '#00f5ff',
+            '#ffffff'
+        ][Math.floor(Math.random()*5)];
+
+        this.rotation = Math.random() * 0.2;
+
+    }
+
+    update(){
+
+        this.y += this.speed;
+        this.angle += this.rotation;
+
+    }
+
+    draw(){
+
+        ctx.save();
+
+        ctx.translate(this.x,this.y);
+
+        ctx.rotate(this.angle);
+
+        ctx.fillStyle = this.color;
+
+        ctx.fillRect(
+            -this.size/2,
+            -this.size/2,
+            this.size,
+            this.size
+        );
+
+        ctx.restore();
+
+    }
+
+}
+
+function animate(){
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+    particles.forEach((p,i)=>{
+
+        p.update();
+
+        p.draw();
+
+        if(p.y > canvas.height){
+
+            particles.splice(i,1);
+
+        }
+
+    });
+
+    requestAnimationFrame(animate);
+
+}
+
+animate();
+
+function createConfetti(count){
+
+    for(let i=0;i<count;i++){
+
+        particles.push(new Confetti());
+
+    }
+
+}
+
+function launchFireworks(count=4){
+
+    for(let i=0;i<count;i++){
+
+        setTimeout(()=>{
+
+            createConfetti(120);
+
+        },i*250);
+
+    }
+
+}
+
+
+/* FLOATING HEARTS */
+
+setInterval(()=>{
+
+    const heart =
+    document.createElement('div');
+
+    heart.className = 'heart';
+
+    heart.innerHTML = '💖';
+
+    heart.style.left =
+    Math.random() * window.innerWidth + 'px';
+
+    heart.style.fontSize =
+    (Math.random()*20 + 20) + 'px';
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },6000);
+
+},300);
+
+/* BLOW CANDLES */
+
+function blowCandles(){
+
+    document
+    .querySelectorAll('.flame')
+    .forEach(flame=>{
+
+        flame.style.transition='0.6s';
+
+        flame.style.opacity='0';
+
+    });
+
+    launchFireworks(8);
+
+    createConfetti(200);
+
+    setTimeout(()=>{
+
+        alert("🎉 Make a wish!");
+
+    },800);
+
+}
+
+/* DANCE */
+
+function danceParty(){
+
+    const pengu =
+    document.getElementById('pengu');
+
+    pengu.style.transition='0.3s';
+
+    let angle = 0;
+
+    const dance = setInterval(()=>{
+
+        angle += 25;
+
+        pengu.style.transform =
+        `rotate(${angle}deg)`;
+
+    },120);
+
+    setTimeout(()=>{
+
+        clearInterval(dance);
+
+        pengu.style.transform='';
+
+    },3000);
+
+    launchFireworks(5);
+
+}
+
+/* FEED */
+
+function feedPengu(el){
+
+    const pengu =
+    document.getElementById('pengu');
+
+    el.style.transition='0.4s';
+
+    el.style.transform=
+    'scale(0.5) translateY(40px)';
+
+    pengu.style.transition='0.5s';
+
+    pengu.style.transform='scale(1.25)';
+
+    setTimeout(()=>{
+
+        pengu.style.transform='scale(1)';
+
+        el.style.transform='';
+
+    },600);
+
+    createConfetti(60);
+
+}
+
+/* SURPRISE */
+
+function launchSurprise(){
+
+    createConfetti(250);
+
+    launchFireworks(6);
+
+    const msg =
+    document.getElementById('message');
+
+    msg.style.display='block';
+    msg.innerHTML = '';
+
+    const text =[
+        "💖 No matter how much we fight, you will always be one of the most important people in my life 🐧✨ Thank you for every laugh, every memory, and every moment. I hope this birthday becomes one of your happiest ever 🎂",
+        "🎂 Happy Birthdayyyy Thangachi 😭💖 Thank you for supporting , annoying me daily, and still somehow being my favorite person ever 🐧✨ Life would honestly be boring without youuu. Now give me cake 🔪🍰",
+        "My dearest Sister, you make every day brighter! Thank you for always being there for me. I love you so much! 💖🐧🎂",
+        "🎊 Dear sister... thank you for growing up with me, supporting me, and making life beautiful 💖 You are genuinely one of the best gifts life gave me 🐧✨ I hope every dream you have comes true because you deserve the entire world 😭🎂",
+        "🎂 Happy Birthdayyy Paathu 😭💖 You’re officially older but still shorter than me so I win 🐧✨ Thanks for making life interesting by disturbing my peace, annoying ,making me happy , laugh till my tummy hurts  and still being my favorite person 😂 Don’t get too emotional reading this okay 😌💖",
+        "💖 Happy Birthday to my little sister and my built-in best friend 🐧✨ We fight, we laugh, we annoy each other… but at the end of the day, I can’t imagine life without you 😭 You mean more to me than I ever say out loud. Stay happy, stay crazy, and never change 💕🎂",
+        "🎊 Happy Birthdayyy my little chaos 😭💖 You’re not just my sister, you’re my favorite person to annoy, protect, and laugh with 🐧✨ Life would be way too boring without you screaming, fighting, and stealing my stuff 😂 I hope you stay this cute, crazy, and annoying forever 💕🎂💖",
+        "🐧 WARNING: Today's birthday girl is officially too pretty, too annoying, too funny, and too powerful 😭💖 Please proceed carefully and give her unlimited cake immediately 🎂✨"
+    ];
+
+
+    const selected = text[Math.floor(Math.random() * text.length)];
+let i = 0;
+
+const typing = setInterval(() => {
+    msg.innerHTML += selected.charAt(i);
+    i++;
+
+    if (i >= selected.length) {
+        clearInterval(typing);
+    }
+}, 40);
+
+}
+
+/* ENLARGE */
+
+function enlarge(img){
+
+    const overlay =
+    document.createElement('div');
+
+    overlay.style.cssText = `
+        position:fixed;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100vh;
+        background:rgba(0,0,0,0.9);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index:999;
+        cursor:zoom-out;
+    `;
+
+    const bigImg =
+    document.createElement('img');
+
+    bigImg.src = img.src;
+
+    bigImg.style.maxWidth='90%';
+
+    bigImg.style.maxHeight='90%';
+
+    bigImg.style.borderRadius='20px';
+
+    overlay.appendChild(bigImg);
+
+    document.body.appendChild(overlay);
+
+    overlay.onclick = ()=>overlay.remove();
+
+}
+/* AUTO RANDOM MESSAGES */
+
+const randomMessages = [
+
+    "You're amazing 💖",
+    "Best sister ever 😭",
+    "Pengu loves you 🐧",
+    "Happy Birthday Daughter,Thangachi,Paathu,Chechi,Captain,Squirrel👑",
+    "Stay happy always ✨"
+
+];
+
+setInterval(()=>{
+
+    const msg =
+    randomMessages[
+        Math.floor(Math.random()*randomMessages.length)
+    ];
+
+    addMessage(msg,'pengu-msg');
+
+},25000);
+
+function cutCake(){
+
+    document
+    .querySelector('.cake-body')
+    .classList.add('cake-cut');
+
+    createConfetti(100);
+
+}
+
+function feedCakeToPengu(){
+
+    const pengu =
+    document.getElementById('pengu');
+
+    pengu.style.transform =
+    'scale(1.2)';
+
+    setTimeout(()=>{
+
+        pengu.style.transform='scale(1)';
+
+    },700);
+
+    addMessage(
+        "YUMMMMM 🍰💖",
+        "pengu-msg"
+    );
+
+}
+
+/* MUSIC */
+
+const music =
+document.getElementById('birthdayMusic');
+
+let isPlaying = false;
+
+function toggleMusic(){
+
+    const icon =
+    document.getElementById('musicIcon');
+
+    if(isPlaying){
+
+        music.pause();
+
+        icon.classList.replace(
+            'fa-pause',
+            'fa-music'
+        );
+
+    }else{
+
+        music.play();
+
+        icon.classList.replace(
+            'fa-music',
+            'fa-pause'
+        );
+
+    }
+
+    isPlaying = !isPlaying;
+
+}
+
+/* BLINK */
+
+function blinkPengu(){
+
+    const eyes =
+    document.querySelectorAll('.eye');
+
+    eyes.forEach(eye=>{
+
+        eye.style.transition='0.12s';
+
+        eye.setAttribute('ry','0.5');
+
+    });
+
+    setTimeout(()=>{
+
+        eyes.forEach(eye=>{
+
+            eye.setAttribute('ry','5');
+
+        });
+
+    },120);
+
+}
+
+setInterval(blinkPengu,3000);
+
+/* CHATBOT */
+
+const openChatBtn =
+document.getElementById('openChatBtn');
+
+const penguChat =
+document.getElementById('pengu-chat');
+
+const sendBtn =
+document.getElementById('sendBtn');
+
+const chatInput =
+document.getElementById('chatInput');
+
+const chatMessages =
+document.getElementById('chat-messages');
+
+openChatBtn.onclick = ()=>{
+
+    if(penguChat.style.display==='flex'){
+
+        penguChat.style.display='none';
+
+    }else{
+
+        penguChat.style.display='flex';
+
+    }
+
+};
+
+function addMessage(text,className){
+
+    const div =
+    document.createElement('div');
+
+    div.className = className;
+
+    div.innerHTML = text;
+
+    chatMessages.appendChild(div);
+
+    chatMessages.scrollTop =
+    chatMessages.scrollHeight;
+
+}
+
+function penguReply(message) {
+
+    message = message.toLowerCase();
+
+    const replies = {
+
+        hello: [
+            "HIIIII BESTIEEE 🐧💖",
+            "Pengu is happy to see youuu 😭✨",
+            "Helloooooo birthday human 🎂"
+        ],
+
+        love: [
+            "THAT IS SO CUTE 😭💖",
+            "Your sister is lucky fr 🐧✨",
+            "AWWWW MY HEART 💖"
+        ],
+
+        birthday: [
+            "HAPPY BIRTHDAYYYYY 🎂🎉",
+            "TIME FOR CAKEEEEE 🍰",
+            "BEST DAY EVERRR 🐧✨"
+        ],
+
+        sad: [
+            "Pengu hug incoming 🫂🐧",
+            "Everything will be okay 💖",
+            "NO SAD ALLOWED HERE 😤"
+        ],
+
+        cake: [
+            "SAVE ME A SLICE 🍰😭",
+            "Chocolate cake pls 🐧",
+            "I can smell the cake 👀"
+        ],
+
+        pengu: [
+            "YES THAT'S ME 😎🐧",
+            "Pengu supremacy ✨",
+            "I AM JUST A LITTLE PENGU 😭"
+        ]
+    };
+
+    let category = "default";
+
+    if (
+        message.includes("hello") ||
+        message.includes("hi") ||
+        message.includes("hey")
+    ) {
+        category = "hello";
+    }
+
+    else if (message.includes("love")) {
+        category = "love";
+    }
+
+    else if (message.includes("birthday")) {
+        category = "birthday";
+    }
+
+    else if (
+        message.includes("sad") ||
+        message.includes("cry")
+    ) {
+        category = "sad";
+    }
+
+    else if (message.includes("cake")) {
+        category = "cake";
+    }
+
+    else if (message.includes("pengu")) {
+        category = "pengu";
+    }
+
+    let reply;
+
+    if (category === "default") {
+
+        const randomReplies = [
+
+            "Pengu is listeninggg 🐧✨",
+            "Tell me moreeee 💖",
+            "That sounds adorable 😭",
+            "WAIT REALLY 👀",
+            "Pengu approves 😎",
+            "AWWWWWW 🐧💖",
+            "You're literally amazing ✨",
+            "Birthday vibes only 🎂"
+
+        ];
+
+        reply = randomReplies[
+            Math.floor(Math.random() * randomReplies.length)
+        ];
+
+    } else {
+
+        const arr = replies[category];
+
+        reply = arr[
+            Math.floor(Math.random() * arr.length)
+        ];
+    }
+
+    chatInput.placeholder =
+    "Pengu is typing...";
+
+    setTimeout(() => {
+
+        addMessage(reply, 'pengu-msg');
+
+        chatInput.placeholder =
+        "Talk to Pengu...";
+
+    }, 700);
+}
+
+function sendMessage(){
+
+    const text =
+    chatInput.value.trim();
+
+    if(!text) return;
+
+    addMessage(text,'user-msg');
+
+    penguReply(text);
+
+    chatInput.value='';
+
+}
+
+sendBtn.onclick = sendMessage;
+
+chatInput.addEventListener(
+'keypress',
+e=>{
+
+    if(e.key==='Enter'){
+
+        sendMessage();
+
+    }
+
+});
+
+/* LOAD */
+
+window.onload = ()=>{
+
+    music.volume = 0.65;
+
+    createConfetti(80);
+
+    setTimeout(()=>{
+
+        launchFireworks(6);
+
+        createConfetti(150);
+
+    },1000);
+
+};
+
+</script>
+
+</body>
+</html>
